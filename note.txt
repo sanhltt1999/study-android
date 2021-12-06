@@ -1,0 +1,4 @@
+MVVM
+https://github.com/android/architecture-samples
+Observables Data
+https://www.raywenderlich.com/27690200-advanced-data-binding-in-android-observables
