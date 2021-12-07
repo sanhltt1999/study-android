@@ -5,6 +5,9 @@
     <data>
 
         <import type="com.example.observabledata.model.Session" />
+
+        <import type="android.view.View" />
+
         <variable
             name="viewmodel"
             type="com.example.observabledata.livedata.MainViewModel" />
@@ -61,11 +64,11 @@
                 android:hint="@string/first_name_hint"
                 android:inputType="textPersonName"
                 android:nextFocusDown="@+id/lastNameEditText"
+                android:text="@={viewmodel.firstName}"
                 app:layout_constraintEnd_toStartOf="@+id/lastNameEditText"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/personalInformationTitleTextView"
-                tools:ignore="Autofill"
-                android:text="@={viewmodel.firstName}"/>
+                tools:ignore="Autofill" />
 
             <EditText
                 android:id="@+id/lastNameEditText"
@@ -74,11 +77,11 @@
                 android:hint="@string/last_name_hint"
                 android:inputType="textPersonName"
                 android:nextFocusDown="@+id/emailEditText"
+                android:text="@={viewmodel.lastName}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/firstNameEditText"
                 app:layout_constraintTop_toBottomOf="@+id/personalInformationTitleTextView"
-                tools:ignore="Autofill"
-                android:text="@={viewmodel.lastName}" />
+                tools:ignore="Autofill" />
 
             <EditText
                 android:id="@+id/emailEditText"
@@ -87,10 +90,10 @@
                 android:hint="@string/email_hint"
                 android:inputType="textEmailAddress"
                 android:nextFocusDown="@+id/phoneNumberAreaCodeEditText"
+                android:text="@={viewmodel.email}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/firstNameEditText"
-                tools:ignore="Autofill"
-                android:text="@={viewmodel.email}" />
+                tools:ignore="Autofill" />
 
             <EditText
                 android:id="@+id/phoneNumberAreaCodeEditText"
@@ -105,8 +108,7 @@
                 app:layout_constraintHorizontal_weight="1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/emailEditText"
-                tools:ignore="Autofill"
-                android:text="@={viewmodel.phoneNumber.areaCode}"/>
+                tools:ignore="Autofill" />
 
             <EditText
                 android:id="@+id/phoneNumberEditText"
@@ -119,8 +121,7 @@
                 app:layout_constraintHorizontal_weight="3"
                 app:layout_constraintStart_toEndOf="@+id/phoneNumberAreaCodeEditText"
                 app:layout_constraintTop_toBottomOf="@+id/emailEditText"
-                tools:ignore="Autofill"
-                android:text="@={viewmodel.phoneNumber.number}"/>
+                tools:ignore="Autofill" />
 
             <TextView
                 android:id="@+id/usernameTextView"
@@ -128,9 +129,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:text="@{@string/username_format(viewmodel.username)}"
+                android:visibility="@{viewmodel.showUsername ? View.VISIBLE : View.GONE}"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/phoneNumberAreaCodeEditText"
-                tools:text="Your username is: firstname_lastname" />
+                app:layout_constraintTop_toBottomOf="@+id/phoneNumberAreaCodeEditText" />
 
             <TextView
                 android:id="@+id/classesTitleTextView"
@@ -154,33 +156,33 @@
                     android:id="@+id/morningSessionChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked="@={viewmodel.sessions[Session.MORNING]}"
                     android:text="@string/morning_label"
-                    android:theme="@style/Theme.MaterialComponents.Light"
-                    android:checked="@={viewmodel.sessions[Session.MORNING]}"/>
+                    android:theme="@style/Theme.MaterialComponents.Light" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/afternoonSessionChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked="@={viewmodel.sessions[Session.NOON]}"
                     android:text="@string/noon_label"
-                    android:theme="@style/Theme.MaterialComponents.Light"
-                    android:checked="@={viewmodel.sessions[Session.NOON]}" />
+                    android:theme="@style/Theme.MaterialComponents.Light" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/eveningSessionChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked="@={viewmodel.sessions[Session.EVENING]}"
                     android:text="@string/evening_label"
-                    android:theme="@style/Theme.MaterialComponents.Light"
-                    android:checked="@={viewmodel.sessions[Session.EVENING]}" />
+                    android:theme="@style/Theme.MaterialComponents.Light" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/nightSessionChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked="@={viewmodel.sessions[Session.NIGHT]}"
                     android:text="@string/night_label"
-                    android:theme="@style/Theme.MaterialComponents.Light"
-                    android:checked="@={viewmodel.sessions[Session.NIGHT]}" />
+                    android:theme="@style/Theme.MaterialComponents.Light" />
 
             </com.google.android.material.chip.ChipGroup>
 
@@ -189,6 +191,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
+                android:enabled="@{viewmodel.enableRegistration}"
+                android:onClick="@{(view) -> viewmodel.onRegisterClicked()}"
                 android:text="@string/register_label"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

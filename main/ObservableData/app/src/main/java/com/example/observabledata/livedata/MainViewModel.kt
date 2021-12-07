@@ -35,12 +35,11 @@
 package com.example.observabledata.livedata
 
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.*
 import androidx.lifecycle.Observer
-import com.example.observabledata.model.PhoneNumber
 import com.example.observabledata.model.Session
 import com.raywenderlich.android.databindingobservables.utils.getEmailPrefix
+import com.raywenderlich.android.databindingobservables.utils.isValidEmail
 import java.util.*
 
 private const val DEFAULT_FIRST_NAME = ""
@@ -50,63 +49,97 @@ private const val TAG = "LiveData-ViewModel"
 
 class MainViewModel : ViewModel(), LifecycleObserver {
 
-  val firstName = MutableLiveData(DEFAULT_FIRST_NAME)
-  val lastName = MutableLiveData(DEFAULT_LAST_NAME)
-  val email = MutableLiveData(DEFAULT_EMAIL)
-  val sessions = MutableLiveData<EnumMap<Session, Boolean>>(
-    EnumMap(Session::class.java)
-  ).apply { // 1
-    Session.values().forEach { value?.put(it, false) } // 2
-  }
-  val phoneNumber = PhoneNumber()
+    /**
+     * simple data
+     */
+    val firstName = MutableLiveData(DEFAULT_FIRST_NAME)
+    val lastName = MutableLiveData(DEFAULT_LAST_NAME)
+    val email = MutableLiveData(DEFAULT_EMAIL) // two-way
 
-  private val _showRegistrationSuccessDialog = MutableLiveData(false)
-  val showRegistrationSuccessDialog: LiveData<Boolean>
-    get() = _showRegistrationSuccessDialog
+    // TODO: Observable Object (Phone number)
 
-  /**
-   * Callback that's fired when the registration button is clicked.
-   * Check out the logs (in Logcat) to see a dump of the user's information.
-   */
-  fun onRegisterClicked() {
-    _showRegistrationSuccessDialog.value = true
-    Log.d(TAG, getUserInformation())
-  }
-
-  /** Generates a random username from the user's email address. */
-  private fun generateUsername(email: String): String {
-    val prefix = getEmailPrefix(email)
-    val suffix = prefix.length
-    return "$prefix$suffix".lowercase()
-  }
-
-  /**
-   * Returns true if the user's mandatory information is valid, false otherwise.
-   * The mandatory user information includes their first name, last name and email address.
-   * Everything else is optional.
-   */
-  private fun isUserInformationValid(): Boolean {
-    return false
-  }
-
-  private fun getUserInformation(): String {
-    return ""
-  }
-
-  /**
-   * Convenience method similar to [MediatorLiveData.addSource], except that it bulk adds sources
-   * to this [MediatorLiveData] to listen to.
-   */
-  private fun <T> MediatorLiveData<T>.addSources(vararg sources: LiveData<out Any>,
-      onChanged: Observer<Any>) {
-    sources.forEach { source ->
-      addSource(source, onChanged)
+    /**
+     * Observabler colection
+     */
+    val sessions = MutableLiveData<EnumMap<Session, Boolean>>(
+        EnumMap(Session::class.java)
+    ).apply { // 1
+        Session.values().forEach { value?.put(it, false) } // 2
     }
-  }
 
-  /**
-  Demo lifecycleOwner
-   **/
+    /**
+     * Transforming a single datasource
+     */
+    val showUsername: LiveData<Boolean> = Transformations.map(email, ::isValidEmail)
+    val username: LiveData<String> = Transformations.map(email, ::generateUsername)  // one -way
+
+    /**
+     * Transforming multiple datasource
+     */
+    val enableRegistration: LiveData<Boolean> = MediatorLiveData<Boolean>().apply {
+        addSources(firstName, lastName, email) {
+            value = isUserInformationValid()
+        }
+    }
+
+    private val _showRegistrationSuccessDialog = MutableLiveData(false)
+    val showRegistrationSuccessDialog: LiveData<Boolean>
+        get() = _showRegistrationSuccessDialog
+
+    /**
+     * Callback that's fired when the registration button is clicked.
+     * Check out the logs (in Logcat) to see a dump of the user's information.
+     */
+    fun onRegisterClicked() {
+        _showRegistrationSuccessDialog.value = true
+        Log.d(TAG, getUserInformation())
+    }
+
+    /** Generates a random username from the user's email address. */
+    private fun generateUsername(email: String): String {
+        val prefix = getEmailPrefix(email)
+        val suffix = prefix.length
+        return "$prefix$suffix".lowercase()
+    }
+
+    /**
+     * Returns true if the user's mandatory information is valid, false otherwise.
+     * The mandatory user information includes their first name, last name and email address.
+     * Everything else is optional.
+     */
+    private fun isUserInformationValid(): Boolean {
+        return !firstName.value.isNullOrBlank()
+                && !lastName.value.isNullOrBlank()
+                && isValidEmail(email.value)
+    }
+
+
+    private fun getUserInformation(): String {
+        return "User information:\n" +
+                "First name: ${firstName.value}\n" +
+                "Last name: ${lastName.value}\n" +
+                "Email: ${email.value}\n" +
+                "Username: ${username.value}\n" +
+                "Sessions: ${sessions.value}\n"
+    }
+
+
+    /**
+     * Convenience method similar to [MediatorLiveData.addSource], except that it bulk adds sources
+     * to this [MediatorLiveData] to listen to.
+     */
+    private fun <T> MediatorLiveData<T>.addSources(
+      vararg sources: LiveData<out Any>,
+      onChanged: Observer<Any>,
+    ) {
+        sources.forEach { source ->
+            addSource(source, onChanged)
+        }
+    }
+
+    /**
+    Demo lifecycleOwner
+     **/
 //  @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
 //  fun create() {
 //    Log.d("MainViewModel", "create")
