@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HandelLifecycles">
-        <activity android:name=".lifecycler.LifecycleOwnerActivity"></activity>
+        <activity
+            android:name=".lifecycleobservable.LifecycleObservableActivity"
+            android:exported="true" />
+        <activity android:name=".lifecycler.LifecycleOwnerActivity" />
         <activity android:name=".normal.NormalActivity" />
         <activity
             android:name=".MainActivity"

@@ -1,17 +1,17 @@
 package com.example.handellifecycles.lifecycler
 
+import android.app.Activity
 import android.content.Context
 import android.location.Location
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
-import com.example.handellifecycles.R
 
-class LifecycleOwnerActivity : AppCompatActivity(), LifecycleOwner {
+class LifecycleOwnerActivity : AppCompatActivity() {
 
     private lateinit var lifecycleRegistry: LifecycleRegistry
     private lateinit var myLocationListener: MyLocationListener
@@ -19,19 +19,19 @@ class LifecycleOwnerActivity : AppCompatActivity(), LifecycleOwner {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        lifecycleRegistry = LifecycleRegistry(this)
-        lifecycleRegistry.markState(Lifecycle.State.CREATED)
+//        lifecycleRegistry = LifecycleRegistry(this)
+//        lifecycleRegistry.markState(Lifecycle.State.CREATED)
 
-        myLocationListener = MyLocationListener(this, lifecycleRegistry) { location ->
-                // update UI
-            }
-
+        myLocationListener = MyLocationListener(this, lifecycle) { location ->
+            // update UI
+        }
+        lifecycle.addObserver(myLocationListener)
     }
 
-    public override fun onStart() {
+    override fun onStart() {
         super.onStart()
-        lifecycleRegistry.markState(Lifecycle.State.STARTED)
     }
+
 }
 
 internal class MyLocationListener(
