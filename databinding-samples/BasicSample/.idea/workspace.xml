@@ -30,7 +30,114 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8dd7fb93-9afd-4518-83e7-76b4a60fb570" name="Default Changelist" comment="" />
+    <list default="true" id="8dd7fb93-9afd-4518-83e7-76b4a60fb570" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/androidTest/java/com/example/viewmodel/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/java/com/example/viewmodel/DetailFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/java/com/example/viewmodel/ListFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/java/com/example/viewmodel/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/java/com/example/viewmodel/ShareViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/java/com/example/viewmodel/Util/BaseFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/java/com/example/viewmodel/Util/SharePagerAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/java/com/example/viewmodel/Util/TabModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/layout/fragment_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/layout/fragment_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/app/src/test/java/com/example/viewmodel/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../main/ViewModel/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Android-DataBindng-RecyclerView/.gradle/6.5/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Android-DataBindng-RecyclerView/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Android-DataBindng-RecyclerView/.gradle/6.5/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Android-DataBindng-RecyclerView/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Android-DataBindng-RecyclerView/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Android-DataBindng-RecyclerView/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../main/ObservableData/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../main/ObservableData/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../main/handel_lifecycles/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../main/handel_lifecycles/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/androidTest/java/com/example/adapterbinding/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/java/com/example/adapterbinding/BindingMethods.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/java/com/example/adapterbinding/CustomBindings.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/java/com/example/adapterbinding/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/java/com/example/adapterbinding/MainViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/java/com/example/adapterbinding/UserInfo.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/drawable-v24/ic_person_black_96dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/drawable/ic_like.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/app/src/test/java/com/example/adapterbinding/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/AdapterBinding/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/Android-DataBindng-RecyclerView" beforeDir="false" afterPath="$PROJECT_DIR$/../../refer/Android-DataBindng-RecyclerView" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../refer/demo-viewmodel-save-state" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +149,7 @@
     </projectState>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="20nfgvW8X8a6QaxsZhHHqbuKwhW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -52,7 +159,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../refer/rw-databinding-observables-3/rw-databinding-observables/starter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../refer/databinding-samples/BasicSample" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -149,10 +256,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="477" y="266" key="#PSD/0.0.1920.1040@0.0.1920.1040" timestamp="1638351460874" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1638350732381">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1638938292741">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1638350732381" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1638938292741" />
     <state width="1877" height="240" key="GridCell.Tab.0.bottom" timestamp="1638169904851">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
